@@ -1,0 +1,109 @@
+/* Title */
+.head--detail {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 20px #FF2079;
+}
+
+/* Card detail */
+.card--detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 70vh;
+}
+.card--detail .card {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(16, 16, 16, 0.6);
+    border: 1px solid #FF2079;
+}
+.card--detail .card:hover {
+    box-shadow: 5px 10px 20px #FF2079;
+    transition: all 0.7s linear;
+}
+.card--detail .card-img {
+    width: 40vw;
+    height: 100%;
+}
+.card--detail .card-body {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card--detail .card-title {
+    color: white;
+    font-size: 30px;
+}
+.detail__text--description {
+    width: 75%;
+    text-align: justify;
+    color: white;
+}
+.detail__text--price {
+    width: 75%;
+    text-align: center;
+    color: white;
+}
+.detail__text--stock {
+    width: 75%;
+    text-align: center;
+    color: gainsboro;
+}
+.card--detail button {
+    background-color: rgba(16, 16, 16);
+    border: 1px solid #FF2079;
+    transition: color .15s ease-in-out,
+}
+.card--detail button:hover {
+    background-color: rgba(16, 16, 16);
+    box-shadow: 5px 10px 20px #440bd4;
+}
+
+/* Button counter */
+.item__count--number {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #FF2079;
+    border-radius: 5px;
+    width: 75%;
+    color: white;
+}
+
+@media only screen and (min-width:0px) and (max-width:800px) {
+    .card--detail {
+        height: auto;
+    }
+    .card--detail .card {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: rgba(16, 16, 16, 0.6);
+        border: 1px solid #FF2079;
+    }
+    .card--detail .card-body {
+        width: 90vw;
+    }
+    .card--detail .card-img {
+        width: 70vw;
+        height: 100%;
+    }
+}

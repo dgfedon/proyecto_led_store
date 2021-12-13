@@ -1,0 +1,14 @@
+/* Container */
+.container--fluid {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* BG page App */
+.bg--colors {
+  background-image: url('./assets/img/bg_led.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}

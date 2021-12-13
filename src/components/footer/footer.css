@@ -1,0 +1,31 @@
+#copy {
+    min-height: 18vh;
+    background-color: rgba(16, 16, 16, 0.6);
+    border-top: 1px solid #440BD4;
+    box-shadow: 0 0 20px #440BD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.text--copy {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #A6ACAF;
+    text-align: center;
+}
+
+.foo-link {
+    color: #A6ACAF;
+    text-decoration: none;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out
+}
+.foo-link:hover {
+    color: #440BD4;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #440BD4;
+}

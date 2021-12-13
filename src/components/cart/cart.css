@@ -1,0 +1,12 @@
+/* Title Cart */
+.head--cart {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 20px #FF2079;
+}
