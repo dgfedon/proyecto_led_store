@@ -10,7 +10,7 @@
     width: 100%;
     border-radius: 50%;
     height: 25px;
-    background: hsla(0, 0%, 0%, 0.1);
+    background: hsla(0, 9%, 94%, 0.4);
     display: block;
     position: absolute;
     bottom: -1.6px;
@@ -22,7 +22,7 @@
     display: block;
     width: 50px;
     height: 50px;
-    background: #E5E7E9;
+    background: #FF2079;
     border-radius: 50%;
     position: relative;
     transform: rotate(45deg);
@@ -42,7 +42,7 @@
     width: 100%;
     border-radius: 50%;
     height: 20px;
-    background: rgba(0, 0, 0, 0.1);
+    background: hsla(0, 9%, 94%, 0.4);
     display: block;
     position: absolute;
     bottom: -1.6px;
@@ -54,7 +54,7 @@
     display: block;
     width: 40px;
     height: 40px;
-    background: #BDC3C7;
+    background: #440BD4;
     border-radius: 50%;
     position: relative;
     transform: rotate(45deg);
@@ -74,7 +74,7 @@
     width: 100%;
     border-radius: 50%;
     height: 15px;
-    background: hsla(0, 0%, 0%, 0.1);
+    background: hsla(0, 9%, 94%, 0.4);
     display: block;
     position: absolute;
     bottom: -1.6px;
@@ -86,7 +86,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: #A6ACAF;
+    background: #08F7FE;
     border-radius: 50%;
     position: relative;
     transform: rotate(45deg);

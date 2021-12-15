@@ -6,7 +6,7 @@
 
 /* BG page App */
 .bg--colors {
-  background-image: url('./assets/img/bg_led.jpg');
+  background-image: url('https://res.cloudinary.com/datafordgf/image/upload/v1639599518/proyecto_led_store/bg_led_qekexe.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

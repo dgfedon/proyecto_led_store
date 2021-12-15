@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 import { getFetch } from '../../helpers/getFetch';
 import Loading from '../animation/Loading';
 import ItemList from './ItemList';
+import 'animate.css';
 
 import './itemList.css';
 
@@ -38,29 +38,15 @@ function ItemListContainer(props) {
                     <h2>{props.heading}</h2>
                     <NavDropdown title="Filtro" id="offcanvasNavbarDropdown">
                         <NavDropdown.Item>
-                            <Link className="dropdown--item" to="/categoria/categoria 1">Categoria 1</Link>
+                            <Link className="dropdown--item" to="/categoria/luces">Luces</Link>
                         </NavDropdown.Item>
                         <NavDropdown.Item>
-                            <Link className="dropdown--item" to="/categoria/categoria 2">Categoria 2</Link>
+                            <Link className="dropdown--item" to="/categoria/barras">Barras</Link>
                         </NavDropdown.Item>
                         <NavDropdown.Item>
-                            <Link className="dropdown--item" to="/categoria/categoria 3">Categoria 3</Link>
+                            <Link className="dropdown--item" to="/categoria/carteles">Carteles</Link>
                         </NavDropdown.Item>
                     </NavDropdown>
-                    {/* <Dropdown>
-                        <Dropdown.Toggle>Filtro</Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            <Dropdown.Item>
-                                <Link to="/categoria/categoria 1">Categoria 1</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
-                                <Link to="/categoria/categoria 2">Categoria 2</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
-                                <Link to="/categoria/categoria 3">Categoria 3</Link>
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown> */}
                 </div>
                 <div className="d-flex justify-content-center">
                     { loading ? 

@@ -15,15 +15,15 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route 
+          <Route
             exact
-            path="/" 
+            path="/"
             element={<HomeContainer />} 
           />
           <Route 
             exact
             path="/categoria/:idCategory" 
-            element={<ItemListContainer heading='Productos'/>} 
+            element={<ItemListContainer heading='Producto Filtrado'/>} 
           />
           <Route 
             exact
