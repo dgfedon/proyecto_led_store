@@ -6,6 +6,12 @@ React Js - Coderhouse.
 
 [Led Store](https://dgfedon.github.io/proyecto_led_store/)
 
+## Para clonar este repositorio
+
+```bash
+  git clone https://github.com/dgfedon/proyecto_led_store.git
+```
+
 ## 🛠 Construido con:
 
 **Lenguajes:** Javascript, CSS, HTML.
