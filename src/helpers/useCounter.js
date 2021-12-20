@@ -6,11 +6,11 @@ export const useCounter = (initial, stock) => {
 
     const handleSum = () => {
         (counter < stock) &&
-            setCounter(prev => prev + 1)
+            setCounter(Math.max(counter + 1, 1))
     }
     const handleRest = () => {
         (counter > initial) &&
-            setCounter(prev => prev - 1)
+            setCounter(Math.max(counter - 1, 1))
     }
 
     return {

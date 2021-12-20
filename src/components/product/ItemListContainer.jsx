@@ -49,11 +49,11 @@ function ItemListContainer(props) {
                     </NavDropdown>
                 </div>
                 <div className="d-flex justify-content-center">
-                    { loading ? 
+                    { loading ? (
                         <Loading />
-                        :
+                    ) : (
                         <ItemList products={products} />
-                    }
+                    )}
                 </div>
             </Container>
         </>

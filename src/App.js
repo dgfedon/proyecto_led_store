@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import ItemListContainer from "./components/product/ItemListContainer";
 import ItemDetailContainer from "./components/detail/ItemDetailContainer";
 import NavBar from "./components/navBar/NavBar";
@@ -34,6 +34,10 @@ function App() {
             exact
             path="/cart" 
             element={<CartContainer />} 
+          />
+          <Route
+            path="*"
+            element={<Navigate replace to="/" />}
           />
         </Routes>
         <FooterContainer />
