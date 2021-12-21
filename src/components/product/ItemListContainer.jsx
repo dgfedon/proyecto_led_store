@@ -13,9 +13,9 @@ import './itemList.css';
 
 function ItemListContainer(props) {
 
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(true)
-    const { idCategory } = useParams()
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { idCategory } = useParams();
 
     useEffect(() => {
         if (idCategory) {

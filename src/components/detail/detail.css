@@ -69,6 +69,10 @@
     border: 1px solid #FF2079;
     transition: color .15s ease-in-out,
 }
+.card--detail button a {
+    text-decoration: none;
+    color: white;
+}
 .card--detail button:hover {
     background-color: rgba(16, 16, 16);
     box-shadow: 5px 10px 20px #440bd4;

@@ -1,14 +1,15 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
+import CartItemList from './CartItemList';
+import Container from 'react-bootstrap/Container';
 
 import './cart.css';
 
 
 function CartContainer() {
+
     return (
-        <Container>
+        <Container className="cart--product">
             <h2 className="head--cart">Carrito de compras</h2>
-            <div style={{height: '70vh'}}></div>
+            <CartItemList />
         </Container>
     )
 }
