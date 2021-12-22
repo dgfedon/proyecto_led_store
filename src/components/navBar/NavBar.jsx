@@ -1,8 +1,8 @@
 import Navbar from 'react-bootstrap/Navbar';
+import CartWidget from '../cart/CartWidget';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom';
-import CartWidget from './CartWidget';
 
 import logo from '../../assets/img/branding_circle.png';
 import './navBar.css';

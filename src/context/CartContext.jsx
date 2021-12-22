@@ -12,16 +12,17 @@ function CartContextProvider( {children} ) {
 
         const prodAdd = cartList.find(prod => prod.id === item.id);
 
-        if (prodAdd) {
+        if (!prodAdd ) return setCartList([...cartList, item]);
 
-            prodAdd.quantity = prodAdd.quantity + item.quantity
-            setCartList(cartList)
+        prodAdd.quantity = prodAdd.quantity + item.quantity;
+        setCartList([...cartList.filter(prod => prod.id !== item.id), prodAdd]);
 
-        } else {
-
-            setCartList([...cartList, item])
-
-        }
+        // if (prodAdd) {
+        //     prodAdd.quantity = prodAdd.quantity + item.quantity
+        //     setCartList(cartList)
+        // } else {
+        //     setCartList([...cartList, item])
+        // }
     }
 
     // Borra item del carrito
@@ -34,24 +35,31 @@ function CartContextProvider( {children} ) {
         setCartList([])
     }
 
+    // Contador carrito
+    const cartCounter = () => {
+        return (
+            cartList.reduce((prev, prod) => (prev + prod.quantity), 0)
+        )
+    }
+
     // Subtotal compra
     const subtotalBuy = () => {
         return ( 
-            cartList.reduce((prev, prod) => prev + (prod.quantity * prod.price), 0)
+            cartList.reduce((prev, prod) => (prev + prod.quantity * prod.price), 0)
         )
     }
 
     // IVA compra
     const ivaBuy = () => {
         return( 
-            cartList.reduce(prod => (subtotalBuy() * 0.21), 0)
+            cartList.reduce(prod => (subtotalBuy(prod) * 0.21), 0)
         )
     }
 
     // Total compra
     const totalBuy = () => {
         return( 
-            cartList.reduce(prod => (subtotalBuy() + ivaBuy()), 0)
+            cartList.reduce(prod => (subtotalBuy(prod) + ivaBuy(prod)), 0)
         )
     }
 
@@ -61,6 +69,7 @@ function CartContextProvider( {children} ) {
             addToCart,
             removeItemCart,
             clearCart,
+            cartCounter,
             subtotalBuy,
             ivaBuy,
             totalBuy

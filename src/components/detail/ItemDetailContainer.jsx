@@ -7,9 +7,9 @@ import Container from 'react-bootstrap/Container';
 
 function ItemDetailContainer() {
 
-    const [detail, setDetail] = useState([])
-    const [loading, setLoading] = useState(true)
-    const {idDetail} = useParams()
+    const [detail, setDetail] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {idDetail} = useParams();
 
     useEffect(() => {
         getFetch
@@ -23,7 +23,7 @@ function ItemDetailContainer() {
             <h2 className="head--detail">Detalle Producto</h2>
             <div>
                 { loading ? 
-                    <Loading />
+                    <Loading load='Cargando detalle' />
                     :
                     <ItemDetail key={detail.id} detail={detail} />
                 }

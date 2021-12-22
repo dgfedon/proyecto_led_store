@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 
+import 'animate.css';
 import './navBar.css';
 
 

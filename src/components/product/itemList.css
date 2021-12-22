@@ -10,9 +10,6 @@
     font-size: 3rem;
     color: white;
     text-shadow: 0 0 20px #FF2079;
-
-    animation: flash;
-    animation-duration: 2s;
 }
 
 /* Card item product */

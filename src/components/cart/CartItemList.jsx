@@ -10,9 +10,9 @@ import './cart.css';
 
 function CartItemList() {
 
-    const navigate = useNavigate();
     const { cartList, clearCart, subtotalBuy, ivaBuy, totalBuy } = useCartContext();
     const { formatNumber } = useFormatNumber();
+    const navigate = useNavigate();
 
     return (
         <>
@@ -34,7 +34,7 @@ function CartItemList() {
 
                     {/* Totales compra */}
                     <tr>
-                        <td colSpan={4} className="text-end">Subtotal</td>
+                        <td colSpan={4} className="text-end">Subtotal compra</td>
                         <td colSpan={2}>{formatNumber(subtotalBuy())}</td>
                     </tr>
                     <tr>
@@ -57,6 +57,11 @@ function CartItemList() {
                 {/* Volver al inicio */}
                 <Button onClick={() => {navigate('/')}} className="cart--button">
                     Seguir comprando
+                </Button>
+
+                {/* Terminar compra */}
+                <Button className="cart--button">
+                    Terminar compra
                 </Button>
             </div>
         </>

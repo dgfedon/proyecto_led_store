@@ -4,7 +4,7 @@ function FooterContainer() {
     
     return (
         <>
-            <Copy copy='Copyright&copy; Led Store | Todos los derechos reservados.' />
+            <Copy copy='Copyright&copy; Led Store 2021 | Todos los derechos reservados.' />
         </>
     )
 }

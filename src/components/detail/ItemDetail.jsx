@@ -37,9 +37,14 @@ function ItemDetail( {detail} ) {
                         {!addCart ? (
                             <ItemCount onAdd={onAdd} stock={detail.stock} />
                         ) : (
-                            <Button onClick={() => {navigate('/cart')}} className="w-75">
-                                Ir al carrito
-                            </Button>
+                            <>
+                                <Button onClick={() => {navigate('/')}} className="w-75">
+                                    Seguir comprando
+                                </Button>
+                                <Button onClick={() => {navigate('/cart')}} className="mt-2 w-75">
+                                    Ir al carrito
+                                </Button>
+                            </>
                         )}
                     </Card.Body>
                 </Card>

@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
 import { getFetch } from '../../helpers/getFetch';
 import Loading from '../animation/Loading';
 import ItemList from './ItemList';
-import 'animate.css';
 
 import './itemList.css';
 
@@ -50,7 +48,7 @@ function ItemListContainer(props) {
                 </div>
                 <div className="d-flex justify-content-center">
                     { loading ? (
-                        <Loading />
+                        <Loading load='Cargando productos' />
                     ) : (
                         <ItemList products={products} />
                     )}
