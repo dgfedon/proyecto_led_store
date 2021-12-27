@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getFetch } from '../../helpers/getFetch';
 import ItemDetail from './ItemDetail';
 import Loading from '../animation/Loading';
 import Container from 'react-bootstrap/Container';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 function ItemDetailContainer() {
 
     const [detail, setDetail] = useState([]);
     const [loading, setLoading] = useState(true);
-    const {idDetail} = useParams();
+    const { idDetail } = useParams();
 
     useEffect(() => {
-        getFetch
-        .then(respData => setDetail(respData.find(detail => detail.id === parseInt(idDetail))))
+        const db = getFirestore()
+        const docDetail = doc(db, 'products', idDetail)
+        getDoc(docDetail)
+        .then(detail => setDetail({id: detail.id, ...detail.data()}))
         .catch(error => console.log(error))
         .finally(() => setLoading(false))
+
     }, [idDetail])
 
     return (

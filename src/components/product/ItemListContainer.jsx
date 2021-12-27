@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { getFetch } from '../../helpers/getFetch';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import Loading from '../animation/Loading';
 import ItemList from './ItemList';
 
@@ -16,18 +16,21 @@ function ItemListContainer(props) {
     const { idCategory } = useParams();
 
     useEffect(() => {
+        const database = getFirestore()
         if (idCategory) {
-            getFetch
-            .then(respData => setProducts(respData.filter(product => product.category === idCategory)))
-            .catch(error => console.log(error))
-            .finally(() => setLoading(false))
+            const queryCollectionCategory = query(collection(database, 'products'), where('category', '==', idCategory))
+                getDocs(queryCollectionCategory)
+                .then(resp => setProducts(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) )))
+                .catch(error => console.log(error))
+                .finally(() => setLoading(false))
         } else {
-            getFetch
-            .then(respData => setProducts(respData))
-            .catch(error => console.log(error))
-            .finally(() => setLoading(false))
+            const queryCollection = query(collection(database, 'products'))
+                getDocs(queryCollection)
+                .then(resp => setProducts(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) )))
+                .catch(error => console.log(error))
+                .finally(() => setLoading(false))
         }
-    }, [idCategory])
+    }, [idCategory]);
 
     return (
         <>
