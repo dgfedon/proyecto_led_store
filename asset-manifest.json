@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/proyecto_led_store/static/css/main.daa076ed.chunk.css",
-    "main.js": "/proyecto_led_store/static/js/main.73275859.chunk.js",
-    "main.js.map": "/proyecto_led_store/static/js/main.73275859.chunk.js.map",
+    "main.js": "/proyecto_led_store/static/js/main.d1f367eb.chunk.js",
+    "main.js.map": "/proyecto_led_store/static/js/main.d1f367eb.chunk.js.map",
     "runtime-main.js": "/proyecto_led_store/static/js/runtime-main.175eee17.js",
     "runtime-main.js.map": "/proyecto_led_store/static/js/runtime-main.175eee17.js.map",
     "static/css/2.a1596f27.chunk.css": "/proyecto_led_store/static/css/2.a1596f27.chunk.css",
-    "static/js/2.771b5e1e.chunk.js": "/proyecto_led_store/static/js/2.771b5e1e.chunk.js",
-    "static/js/2.771b5e1e.chunk.js.map": "/proyecto_led_store/static/js/2.771b5e1e.chunk.js.map",
+    "static/js/2.81682d49.chunk.js": "/proyecto_led_store/static/js/2.81682d49.chunk.js",
+    "static/js/2.81682d49.chunk.js.map": "/proyecto_led_store/static/js/2.81682d49.chunk.js.map",
     "index.html": "/proyecto_led_store/index.html",
     "static/css/2.a1596f27.chunk.css.map": "/proyecto_led_store/static/css/2.a1596f27.chunk.css.map",
     "static/css/main.daa076ed.chunk.css.map": "/proyecto_led_store/static/css/main.daa076ed.chunk.css.map",
-    "static/js/2.771b5e1e.chunk.js.LICENSE.txt": "/proyecto_led_store/static/js/2.771b5e1e.chunk.js.LICENSE.txt",
+    "static/js/2.81682d49.chunk.js.LICENSE.txt": "/proyecto_led_store/static/js/2.81682d49.chunk.js.LICENSE.txt",
     "static/media/branding_circle.8f5fd309.png": "/proyecto_led_store/static/media/branding_circle.8f5fd309.png"
   },
   "entrypoints": [
     "static/js/runtime-main.175eee17.js",
     "static/css/2.a1596f27.chunk.css",
-    "static/js/2.771b5e1e.chunk.js",
+    "static/js/2.81682d49.chunk.js",
     "static/css/main.daa076ed.chunk.css",
-    "static/js/main.73275859.chunk.js"
+    "static/js/main.d1f367eb.chunk.js"
   ]
 }
