@@ -59,7 +59,7 @@
     background-color: rgba(16, 16, 16);
     border: 1px solid #FF2079;
     margin: 10px;
-    transition: color .15s ease-in-out,
+    transition: color .15s ease-in-out;
 }
 .cart--button:hover {
     background-color: rgba(16, 16, 16);

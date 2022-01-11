@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/detail/ItemDetailContainer";
 import NavBar from "./components/navBar/NavBar";
 import FooterContainer from "./components/footer/FooterContainer";
 import HomeContainer from "./components/home/HomeContainer";
+import CheckoutCart from "./components/checkout/CheckoutCart";
 
 import './App.css';
 
@@ -36,6 +37,11 @@ function App() {
               exact
               path="/cart" 
               element={<CartContainer />} 
+            />
+            <Route 
+              exact
+              path="/checkoutCart" 
+              element={<CheckoutCart />} 
             />
             <Route
               path="*"

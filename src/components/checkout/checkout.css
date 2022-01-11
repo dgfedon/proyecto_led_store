@@ -1,0 +1,81 @@
+/* Container Form Buy  */
+.summary--buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary--buy p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.container--form {
+    background-color: rgba(16, 16, 16, 0.6);
+    border: 1px solid #FF2079;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 10px;
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container--form h3{
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0 20px #FF2079;
+
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.container--form label {
+    color: aliceblue;
+}
+
+/* Container Generate Order */
+.container--order {
+    background-color: rgba(16, 16, 16, 0.6);
+    border: 1px solid #FF2079;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 10px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container--order:hover {
+    box-shadow: 5px 10px 20px #FF2079;
+    transition: all 0.7s linear;
+}
+.container--order h2 {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 20px #FF2079;
+
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.container--order p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Button */
+.btn--checkout {
+    background-color: rgba(16, 16, 16);
+    color: aliceblue;
+    border: 1px solid #FF2079;
+    border-radius: 5px;
+    margin: 10px;
+    transition: color .15s ease-in-out;
+}
+.btn--checkout:hover {
+    background-color: rgba(16, 16, 16);
+    box-shadow: 5px 10px 20px #440bd4;
+    color: white;
+}

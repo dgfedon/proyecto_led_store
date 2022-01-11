@@ -14,15 +14,13 @@ function ItemDetail( {detail} ) {
 
     const navigate = useNavigate();
     const [addCart, setAddCart] = useState(0);
-    const { cartList, addToCart } = useCartContext();
+    const { addToCart } = useCartContext();
     const { formatNumber } = useFormatNumber();
 
     const onAdd = (quantity) => {
             setAddCart(true)
             addToCart( {...detail, quantity:quantity} )
         };
-
-    console.log('ItemDetail', cartList);
 
     return (
         <>

@@ -17,19 +17,15 @@ function ItemListContainer(props) {
 
     useEffect(() => {
         const database = getFirestore()
-        if (idCategory) {
-            const queryCollectionCategory = query(collection(database, 'products'), where('category', '==', idCategory))
-                getDocs(queryCollectionCategory)
-                .then(resp => setProducts(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) )))
-                .catch(error => console.log(error))
-                .finally(() => setLoading(false))
-        } else {
-            const queryCollection = query(collection(database, 'products'))
-                getDocs(queryCollection)
-                .then(resp => setProducts(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) )))
-                .catch(error => console.log(error))
-                .finally(() => setLoading(false))
-        }
+        const queryCollection = idCategory ? (
+            query(collection(database, 'products'), where('category', '==', idCategory))
+            ) : (
+            query(collection(database, 'products'))
+            )
+        getDocs(queryCollection)
+        .then(resp => setProducts(resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) )))
+        .catch(error => console.log(error))
+        .finally(() => setLoading(false))
     }, [idCategory]);
 
     return (

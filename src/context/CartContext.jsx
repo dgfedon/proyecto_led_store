@@ -16,13 +16,6 @@ function CartContextProvider( {children} ) {
 
         prodAdd.quantity = prodAdd.quantity + item.quantity;
         setCartList([...cartList.filter(prod => prod.id !== item.id), prodAdd]);
-
-        // if (prodAdd) {
-        //     prodAdd.quantity = prodAdd.quantity + item.quantity
-        //     setCartList(cartList)
-        // } else {
-        //     setCartList([...cartList, item])
-        // }
     }
 
     // Borra item del carrito
