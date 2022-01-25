@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import ItemCount from '../product/ItemCount';
+import Swal from 'sweetalert2';
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +20,15 @@ function ItemDetail( {detail} ) {
 
     const onAdd = (quantity) => {
             setAddCart(true)
+
+            Swal.fire({
+                title: 'Producto agregado!',
+                text: `Agregaste: ${detail.name}. Cantidad: ${quantity}.`,
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#440bd4'
+            })
+
             addToCart( {...detail, quantity:quantity} )
         };
 
