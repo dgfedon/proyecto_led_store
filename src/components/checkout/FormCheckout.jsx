@@ -19,19 +19,19 @@ function FormCheckout({ send, change }) {
                     if (!dataForm.name) {
                         error.name = 'Ingresa un nombre';
                     } else if (dataForm.name.length < 3) {
-                        error.name = 'Nombre invalido';
+                        error.name = 'Nombre inválido';
                     }
 
                     if (!dataForm.phone) {
-                        error.phone = 'Ingresa un número movil';
+                        error.phone = 'Ingresa un número móvil';
                     } else if (!/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/.test(dataForm.phone)) {
-                        error.phone = 'Número movil invalido';
+                        error.phone = 'Número móvil inválido';
                     }
 
                     if (!dataForm.email) {
                         error.email = 'Ingresa un email, nos comunicamos por este medio';
                     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(dataForm.email)) {
-                        error.email = 'Email invalido';
+                        error.email = 'Email inválido';
                     }
 
                     return error;
@@ -89,8 +89,7 @@ function FormCheckout({ send, change }) {
                                     onBlur={handleBlur} />
                             </Form.Group>
                         </Row>
-                        <button type="submit" disabled={
-                            dataForm.email !== dataForm.emailConfirm ? true : false || isValid === false} onClick={send} className="btn--checkout w-100">
+                        <button type="submit" disabled={ dataForm.name === '' || dataForm.phone === '' || dataForm.email === '' || dataForm.email !== dataForm.emailConfirm ? true : false || isValid === false } onClick={send} className="btn--checkout w-100">
                             Generar orden
                         </button>
                     </Form>
