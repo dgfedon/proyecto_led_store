@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import FormCheckout from './FormCheckout';
 import Table from 'react-bootstrap/Table';
 import useFormatNumber from '../../helpers/useFormatNumber';
+import Swal from 'sweetalert2';
 import { useState } from 'react';
 import { useCartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
@@ -36,31 +37,45 @@ function CheckoutCart() {
             })
 
         const db = getFirestore()
+        const oufOfStock = []
 
-        // Actualizar stock
-        function updateStock() {
-            const batch = writeBatch(db)
-            const collectionUpdate = collection(db, 'products')
-            const stockCurrent = query(collectionUpdate, where(documentId(), 'in', cartList.map(p => p.id)))
-            getDocs(stockCurrent)
-            .then(resp => {
-                resp.docs.forEach(route => {
-                    batch.update(route.ref, {
-                        stock: route.data().stock - cartList.find(items => items.id === route.id).quantity
-                    })
-                })
-                batch.commit()
+        // Stock firebase
+        const batch = writeBatch(db)
+        const collectionUpdate = collection(db, 'products')
+        const stockCurrent = query(collectionUpdate, where(documentId(), 'in', cartList.map(p => p.id)))
+        getDocs(stockCurrent)
+        .then(resp => {
+            resp.docs.forEach(route => {
+                const item = cartList.find(items => items.id === route.id);
+                if (route.data().stock >= item.quantity) {
+                batch.update(route.ref, {
+                    stock: route.data().stock - item.quantity,
+                });
+                } else {
+                oufOfStock.push(item);
+                }
             })
-        }
 
-        const orderCollection = collection(db, 'orders')
-        addDoc(orderCollection, order)
-        .then(resp => setOrderId(resp.id))
-        .catch(error => console.log(error))
-        .finally(() => { 
-            setDataForm({ name: '', email: '', emailConfirm: '', phone: '' })
-            updateStock()
-            clearCart()
+            if (oufOfStock.length === 0) {
+                const orderCollection = collection(db, 'orders')
+                addDoc(orderCollection, order)
+                .then(resp => {
+                    batch.commit();
+                    setOrderId(resp.id)
+                })
+                .catch(error => console.log(error))
+                .finally(() => {
+                    setDataForm({ name: '', email: '', emailConfirm: '', phone: '' })
+                    clearCart()
+                });
+            } else {
+                Swal.fire({
+                    title: 'Productos sin stock en el carrito!',
+                    icon: 'warning',
+                    confirmButtonText: 'Ok',
+                    confirmButtonColor: '#440bd4'
+                })
+            }
         })
     }
 
