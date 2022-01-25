@@ -56,6 +56,14 @@ function CartContextProvider( {children} ) {
         )
     }
 
+    // Formulario
+    const [dataForm, setDataForm] = useState({ 
+        name: '',
+        phone: '',
+        email: '', 
+        emailConfirm: ''
+    })
+
     return (
         <CartContext.Provider value={{
             cartList,
@@ -65,7 +73,9 @@ function CartContextProvider( {children} ) {
             cartCounter,
             subtotalBuy,
             ivaBuy,
-            totalBuy
+            totalBuy,
+            dataForm,
+            setDataForm
         }}>
             {children}
         </CartContext.Provider>

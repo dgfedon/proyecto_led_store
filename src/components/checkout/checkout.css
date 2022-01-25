@@ -35,6 +35,19 @@
     color: aliceblue;
 }
 
+.container--form table {
+    --bs-table-bg: rgba(16, 16, 16, 0.6);
+    --bs-table-striped-bg: rgba(39, 38, 38, 0.6);
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #0000;
+    border-radius: 5px;
+}
+
 /* Container Generate Order */
 .container--order {
     background-color: rgba(16, 16, 16, 0.6);
@@ -61,6 +74,7 @@
     animation-duration: 1s;
 }
 .container--order p {
+    text-align: center;
     font-size: 1.5rem;
     color: white;
 }
@@ -68,14 +82,14 @@
 /* Button */
 .btn--checkout {
     background-color: rgba(16, 16, 16);
-    color: aliceblue;
     border: 1px solid #FF2079;
     border-radius: 5px;
     margin: 10px;
     transition: color .15s ease-in-out;
 }
-.btn--checkout:hover {
-    background-color: rgba(16, 16, 16);
-    box-shadow: 5px 10px 20px #440bd4;
-    color: white;
+
+
+/* Validate */
+.validate--error {
+    color: red;
 }

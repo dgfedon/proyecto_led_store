@@ -33,7 +33,15 @@ function ItemDetail( {detail} ) {
                         <Card.Text className="detail__text--price">Precio: {formatNumber(detail.price)}</Card.Text>
                         <Card.Text className="detail__text--stock">Stock disponible: {detail.stock}</Card.Text>
                         {!addCart ? (
-                            <ItemCount onAdd={onAdd} stock={detail.stock} />
+                            <>
+                            {detail.stock > 0 ? (
+                                <ItemCount onAdd={onAdd} stock={detail.stock} />
+                            ) : (
+                                <Button onClick={() => {navigate('/')}} className="w-75">
+                                    Seguir comprando
+                                </Button>
+                            )}
+                            </>
                         ) : (
                             <>
                                 <Button onClick={() => {navigate('/')}} className="w-75">
