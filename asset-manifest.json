@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/proyecto_led_store/static/css/main.f346bb81.chunk.css",
-    "main.js": "/proyecto_led_store/static/js/main.b548019b.chunk.js",
-    "main.js.map": "/proyecto_led_store/static/js/main.b548019b.chunk.js.map",
+    "main.js": "/proyecto_led_store/static/js/main.217b944c.chunk.js",
+    "main.js.map": "/proyecto_led_store/static/js/main.217b944c.chunk.js.map",
     "runtime-main.js": "/proyecto_led_store/static/js/runtime-main.175eee17.js",
     "runtime-main.js.map": "/proyecto_led_store/static/js/runtime-main.175eee17.js.map",
     "static/css/2.a1596f27.chunk.css": "/proyecto_led_store/static/css/2.a1596f27.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.ba5c22ef.chunk.js",
     "static/css/main.f346bb81.chunk.css",
-    "static/js/main.b548019b.chunk.js"
+    "static/js/main.217b944c.chunk.js"
   ]
 }
